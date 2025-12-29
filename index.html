@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="🌸 Cherry Blossom Live - DinoRainbowGirlMusic">
+        <meta property="og:description" content="Countdown to the new release by DinoRainbowGirlMusic. Get ready for the latest cherry blossom vibes!">
+        <meta property="og:image" content="https://i.scdn.co/image/ab67616d0000b273c38e68f4802be77b02ac2adb">
+        <meta property="og:url" content="https://recordu.lnk.to/Cherry_Blossom">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="🌸 Cherry Blossom Live - DinoRainbowGirlMusic">
+        <meta name="twitter:description" content="Countdown to the new release by DinoRainbowGirlMusic. Get ready for the latest cherry blossom vibes!">
+        <meta name="twitter:image" content="https://i.scdn.co/image/ab67616d0000b273c38e68f4802be77b02ac2adb">
+        <meta name="description" content="Countdown to DinoRainbowGirlMusic's new release 'Cherry Blossom'. Pre-save now on Spotify!">
+        <meta name="keywords" content="DinoRainbowGirlMusic, Cherry Blossom, Spotify, Music Release, Countdown">
+        <meta name="author" content="gurraoptimus">
+        <link rel="icon" href="https://i.scdn.co/image/ab67616d0000b273c38e68f4802be77b02ac2adb" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 DinoRainbowGirlMusic - Cherry Blossom Live Countdown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #ffe4e1;
+            margin-bottom: 15px;
+        }
+
+        .spotify-badge {
+            display: inline-block;
+            background: #1DB954;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+        }
+
+        .countdown-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin: 30px auto;
+            max-width: 900px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease-out;
+            text-align: center;
+        }
+
+        .album-artwork {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            margin: 0 auto 30px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .countdown-section h2 {
+            color: #d946a6;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .release-info {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .time-unit {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
+            padding: 25px 30px;
+            border-radius: 15px;
+            min-width: 120px;
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .time-unit:hover {
+            transform: scale(1.05);
+        }
+
+        .time-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .time-label {
+            font-size: 1em;
+            color: #ffe4e1;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .featured-release {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .featured-release h2 {
+            color: #d946a6;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .spotify-embed-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .spotify-embed-container iframe {
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+
+        .release-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .release-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .release-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .release-card h3 {
+            color: #d946a6;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 10px;
+            min-width: 150px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-box .number {
+            font-size: 2.5em;
+            color: #d946a6;
+            font-weight: bold;
+        }
+
+        .stat-box .label {
+            color: #666;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .petal {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(ellipse at center, #ffb3d9 0%, #ffc0cb 50%, #ff69b4 100%);
+            border-radius: 50% 0 50% 0;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 1000;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translate(0, -100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-100vw, 100vh) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .blossom-falls-text {
+            position: fixed;
+            top: 0;
+            right: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff69b4;
+            text-shadow: 2px 2px 8px rgba(255, 105, 180, 0.6),
+                         -2px -2px 8px rgba(255, 182, 217, 0.4);
+            pointer-events: none;
+            z-index: 999;
+            animation: blossomFalls 8s linear infinite;
+            opacity: 0;
+            white-space: nowrap;
+            font-family: 'Georgia', serif;
+        }
+
+        @keyframes blossomFalls {
+            0% {
+                transform: translate(0, -50px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-100vw, 100vh) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+
+        button {
+            background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(29, 185, 84, 0.3);
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(29, 185, 84, 0.5);
+        }
+
+        button.secondary {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+        }
+
+        button.secondary:hover {
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.5);
+        }
+
+        .controls {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .released-message {
+            display: none;
+            background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(29, 185, 84, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .countdown-section {
+                padding: 30px 20px;
+            }
+
+            .album-artwork {
+                width: 200px;
+                height: 200px;
+            }
+
+            .time-unit {
+                min-width: 90px;
+                padding: 20px 15px;
+            }
+
+            .time-value {
+                font-size: 2em;
+            }
+
+            .spotify-embed-container iframe {
+                width: 100% !important;
+                max-width: 100%;
+            }
+
+            .blossom-falls-text {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blossom-falls-text">🌸 Cherry Blossom 🌸</div>    
+    <div class="container">
+        <header>
+            <h1>🌸 Cherry Blossom Live 🌸</h1>
+            <p class="subtitle">DinoRainbowGirlMusic - Countdown to New Release</p>
+            <span class="spotify-badge">🎵 Powered by Gurraoptimus</span>
+        </header>
+
+        <div class="countdown-section">
+            <img src="https://i.scdn.co/image/ab67616d0000b273c38e68f4802be77b02ac2adb" 
+                 alt="Album Artwork" 
+                 class="album-artwork">
+            
+            <h2>New Release Coming Soon!</h2>
+            <p class="release-info">By <strong>DinoRainbowGirlMusic</strong></p>
+            <p class="release-info">Get ready for the latest cherry blossom vibes</p>
+            
+            <div class="released-message" id="releasedMessage">
+                <a href="spotify:album:1dAQtNkRdOQPKC3cuvpnXw" style="color: white; text-decoration: none;">🎉 NOW AVAILABLE! Click to open in Spotify 🎉</a>
+            </div>
+            
+            <div class="countdown-timer" id="countdown">
+                <div class="time-unit">
+                    <div class="time-value" id="days"></div>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="hours"></div>
+                    <div class="time-label">Hours</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="minutes"></div>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="seconds">00</div>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button onclick="window.open('https://recordu.lnk.to/Cherry_Blossom', '_blank')">
+                    🎧 Pre-Save on Spotify
+                </button>
+                <button class="secondary" onclick="createPetalBurst()">🌸 Celebrate</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="number" id="totalTime">--</div>
+                <div class="label">Time Until Release</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">🌸</div>
+                <div class="label">Excitement Level</div>
+            </div>
+        </div>
+
+        <div class="featured-release">
+            <h2>THIS IS - DinoRainbowGirlMusic</h2>
+            <div class="spotify-embed-container">
+                <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/playlist/6I5ZeprYqaUr3QzBvEJqeV?utm_source=generator" 
+                    width="100%" 
+                    height="352" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="release-grid">
+            <div class="release-card">
+                <h3>🎵 Release Radar</h3>
+                <div class="spotify-embed-container">
+                    <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/playlist/37i9dQZEVXbn7jiPSkzMMz?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="release-card">
+                <h3>🎤 The Artist</h3>
+                <div class="spotify-embed-container">
+                    <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/artist/68zQCTNNRNVRmYUCCN91r7?utm_source=generator"
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="release-card">
+                <h3>Releases Playlist</h3>
+                <div class="spotify-embed-container">
+                    <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/playlist/4xMvSX5xBoLbFMR3qJ2cfc?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set the release date (Change this to your actual release date)
+        // Format: "Month Day, Year Hour:Minute:Second"
+        const releaseDate = new Date("January 1, 2026 00:00:00").getTime();
+
+        // Countdown function
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = releaseDate - now;
+
+            if (distance < 0) {
+                // Release date has passed
+                document.getElementById('countdown').style.display = 'none';
+                document.getElementById('releasedMessage').style.display = 'block';
+                document.getElementById('totalTime').textContent = 'NOW!';
+                return;
+            }
+
+            // Calculate time units
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            
+            // Update total time display
+            if (days > 0) {
+                document.getElementById('totalTime').textContent = days + 'd ' + hours + 'h';
+            } else if (hours > 0) {
+                document.getElementById('totalTime').textContent = hours + 'h ' + minutes + 'm';
+            } else {
+                document.getElementById('totalTime').textContent = minutes + 'm ' + seconds + 's';
+            }
+        }
+
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Create petal burst effect
+        function createPetalBurst() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const petal = document.createElement('div');
+                    petal.className = 'petal';
+                    petal.style.left = Math.random() * 100 + 'vw';
+                    petal.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    petal.style.animationDelay = Math.random() * 2 + 's';
+                    document.body.appendChild(petal);
+                    
+                    setTimeout(() => petal.remove(), 8000);
+                }, i * 50);
+            }
+        }
+
+    </script>
+    
+    <footer style="text-align: center; padding: 40px 20px; color: rgba(255, 255, 255, 0.9); margin-top: 60px;">
+        <p style="font-size: 1.1em; margin-bottom: 10px;">&copy; <span id="year"></span> DinoRainbowGirlMusic. All rights reserved.</p>
+        <p style="font-size: 0.9em; opacity: 0.8;">Created with 💖 by <a href="https://gurraoptimus.se" target="_blank" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.5);">Gurraoptimus Development</a></p>
+    </footer>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
