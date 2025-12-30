@@ -16,7 +16,7 @@
         <link rel="icon" href="https://i.scdn.co/image/ab67616d0000b273c38e68f4802be77b02ac2adb" type="image/png">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0,0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>🌸 DinoRainbowGirlMusic - Cherry Blossom Live Countdown</title>
     <style>
         * {
@@ -406,8 +406,8 @@
             <img src="https://i.scdn.co/image/ab67616d0000b273c38e68f4802be77b02ac2adb" 
                  alt="Album Artwork" 
                  class="album-artwork">
-            
-            <h2>New Release Coming Soon!</h2>
+            <h2 id="new-release">New Release!</h2>
+            <h2 id="releaseTitle">New Release Coming Soon!</h2>
             <p class="release-info">By <strong>DinoRainbowGirlMusic</strong></p>
             <p class="release-info">Get ready for the latest cherry blossom vibes</p>
             
@@ -429,7 +429,7 @@
                     <div class="time-label">Minutes</div>
                 </div>
                 <div class="time-unit">
-                    <div class="time-value" id="seconds">00</div>
+                    <div class="time-value" id="seconds"></div>
                     <div class="time-label">Seconds</div>
                 </div>
             </div>
@@ -531,6 +531,8 @@
                 document.getElementById('countdown').style.display = 'none';
                 document.getElementById('releasedMessage').style.display = 'block';
                 document.getElementById('totalTime').textContent = 'NOW!';
+                document.getElementById('releaseTitle').style.display = 'none';
+                document.getElementById('new-release').style.display = 'block';
                 return;
             }
 
@@ -541,10 +543,10 @@
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Display the result
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            document.getElementById('days').textContent = String(days).padStart(1, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(1,'0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(1, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(1, '0');
             
             // Update total time display
             if (days > 0) {
