@@ -1,0 +1,628 @@
+								<!-- Written by Gurraoptimus for Gurraoptimus Development 2026 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071522">
+<meta name="description" content="Somewhere in the Darkness (I Still Miss You...) — DinoRainbowGirlMusic, October 31, 2026.">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<title>Somewhere in the Darkness | DinoRainbowGirlMusic</title>
+
+<style>
+:root{--ice:#b8f4ff;--blue:#65cfff;--bg:#06111f;--muted:#91b5c9;--line:rgba(190,239,255,.18)}
+*{box-sizing:border-box}
+html{width:100%;height:100%;overflow:hidden}
+body{width:100%;height:100%;height:100dvh;min-height:0;margin:0;display:flex;flex-direction:column;overflow:hidden;color:#effaff;background:var(--bg);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:-3%;z-index:-2;background:linear-gradient(120deg,rgba(3,12,25,.87),rgba(4,24,42,.52),rgba(2,10,22,.88)),url("exdened(cover-art).png") center/cover no-repeat;animation:backgroundDrift 24s ease-in-out infinite alternate}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 70% 30%,#65cfff20,transparent 55%),linear-gradient(0deg,#06111ff0,transparent 70%)}
+@keyframes backgroundDrift{from{transform:scale(1)}to{transform:scale(1.08)}}
+#particles{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.particle{position:absolute;width:3px;height:3px;border-radius:50%;background:#d8faff;box-shadow:0 0 14px 3px #65cfff77;animation:floatUp linear infinite}
+@keyframes floatUp{from{transform:translateY(40px);opacity:0}20%{opacity:.8}80%{opacity:.45}to{transform:translateY(-110vh);opacity:0}}
+header,main,footer{position:relative;z-index:1}
+header{flex:0 0 auto;width:100%;max-width:1250px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}
+.brand-mark{display:grid;place-items:center;flex-shrink:0;width:36px;height:36px;border:1px solid #a8eaff77;border-radius:50%;color:var(--ice)}
+.pill{border:1px solid var(--line);border-radius:30px;padding:9px 12px;color:#c7efff;background:#d7f5ff09;font-size:.67rem;letter-spacing:.1em;white-space:nowrap}
+main{flex:1 1 auto;min-height:0;width:min(920px,calc(100% - 32px));margin:0 auto;padding:10px 0;display:flex;flex-direction:column;justify-content:center;gap:12px;overflow:hidden}
+.hero{flex:0 0 auto;text-align:center;animation:fadeIn 1s ease both}
+.eyebrow{color:#b9edff;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.pulse-dot{display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--ice);box-shadow:0 0 12px var(--blue);animation:pulse 1.7s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.7)}}
+h1{margin:10px 0 8px;font-size:clamp(2rem,5.5vh,5rem);line-height:.98;font-weight:300;letter-spacing:-.055em;text-shadow:0 0 38px #5ecfff25}
+h1 span{display:block;color:#b5edff;font-weight:500}
+.subtitle{margin:0;color:#d1edfa;font-size:clamp(.85rem,2vw,1.2rem);letter-spacing:.1em}
+.release-date{display:inline-block;margin-top:12px;padding:8px 13px;border:1px solid var(--line);border-radius:30px;background:#081a2b88;color:#dff8ff;font-size:.8rem}
+.artist{margin:10px 0 12px;color:#a7c9dc;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase}
+.glass{border:1px solid var(--line);border-radius:23px;background:linear-gradient(135deg,#102b40d9,#061422e8);box-shadow:0 22px 75px #0004,inset 0 1px #ffffff08;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);animation:fadeIn .9s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}
+.countdown-panel{flex:0 0 auto;padding:14px 20px;margin:0}
+.section-heading{margin:0;color:#bfefff;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0 8px}
+.timebox{min-width:0;padding:10px 4px;text-align:center;border:1px solid #b7eaff20;border-radius:14px;background:#061523a8}
+.number{display:block;font-size:clamp(1.35rem,3.8vh,2.7rem);font-weight:300;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.unit{display:block;margin-top:3px;color:var(--muted);font-size:.58rem;letter-spacing:.13em;text-transform:uppercase}
+.countdown-note{margin:0;text-align:center;color:var(--muted);font-size:.77rem}
+.music-card{flex:0 1 auto;min-height:0;display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);align-items:center;gap:22px;padding:14px 18px}
+.cover-container{position:relative;width:100%;aspect-ratio:1;overflow:hidden;border-radius:17px;border:1px solid #b8efff30;box-shadow:0 14px 40px #0007,0 0 25px #65cfff17}
+.cover-art{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.cover-container:hover .cover-art{transform:scale(1.045)}
+.track-info{min-width:0}
+.preview-label{display:inline-block;color:#9fe6ff;font-size:.62rem;letter-spacing:.16em;line-height:1.8}
+.track-title{margin:8px 0 5px;font-size:clamp(1.15rem,2.7vh,1.8rem);line-height:1.15;letter-spacing:-.04em;overflow-wrap:anywhere}
+.track-subtitle{margin:0 0 10px;color:#c2e5f5;font-size:.9rem}
+.track-artist{margin:0;color:#86aabd;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.track-divider{width:58px;height:2px;margin:12px 0;border-radius:4px;background:linear-gradient(90deg,var(--ice),transparent)}
+.track-description{margin:0;color:#a9c6d6;font-size:.76rem;line-height:1.5}
+.actions{flex:0 0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin-top:0}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:38px;padding:9px 14px;border:1px solid #bdefff35;border-radius:30px;background:#e2f8ff09;color:#eafaff;font:inherit;font-size:.77rem;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);background:#b8f4ff18}
+.btn:focus-visible,button:focus-visible{outline:2px solid #c4f4ff;outline-offset:4px}
+.btn.primary{border-color:transparent;background:linear-gradient(120deg,#b9f0ff,#66c9f7);color:#062035;font-weight:600}
+.btn svg{display:block;flex:0 0 18px;width:18px;height:18px;overflow:visible}
+.btn.primary .spotify-icon{width:19px;height:19px;flex-basis:19px}
+.btn .apple-icon{width:18px;height:18px;flex-basis:18px}
+.btn .share-icon{width:18px;height:18px;flex-basis:18px;display:block;flex-shrink:0;transform-origin:center;transition:transform .3s ease,color .3s ease,filter .3s ease}
+#share-button{position:relative;overflow:hidden;isolation:isolate}
+#share-button:hover .share-icon{transform:translate(2px,-2px);filter:drop-shadow(0 0 5px #65cfff)}
+#share-button.copying{pointer-events:none;border-color:#b8f4ff;background:linear-gradient(120deg,#173c53,#0b2639);box-shadow:0 0 18px #65cfff35}
+#share-button.copying .share-icon{animation:clipboardCopy .65s ease both}
+#share-button.copied{border-color:#a8f5d0;color:#d9ffeb;background:linear-gradient(120deg,#123e3b,#0a292e);box-shadow:0 0 24px #6bffce35;animation:copySuccess .45s ease both}
+#share-button.copied .share-icon{color:#a8f5d0;animation:checkPop .4s cubic-bezier(.2,.8,.3,1.4) both}
+@keyframes clipboardCopy{0%{transform:scale(1) rotate(0)}35%{transform:scale(.75) rotate(-12deg)}70%{transform:scale(1.2) rotate(8deg)}100%{transform:scale(1) rotate(0)}}
+@keyframes copySuccess{0%{transform:scale(1)}45%{transform:scale(1.055)}100%{transform:scale(1)}}
+@keyframes checkPop{0%{transform:scale(.3) rotate(-25deg);opacity:0}70%{transform:scale(1.25) rotate(8deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
+.copy-toast{position:fixed;z-index:120;left:50%;bottom:18px;display:flex;align-items:center;gap:10px;max-width:calc(100% - 32px);padding:13px 18px;border:1px solid #b8f4ff45;border-radius:18px;background:rgba(7,27,42,.88);color:#eafaff;box-shadow:0 12px 45px #0006,0 0 25px #65cfff20;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);font-size:.82rem;opacity:0;pointer-events:none;transform:translate(-50%,18px) scale(.96)}
+.copy-toast.show{animation:toastIn .4s cubic-bezier(.2,.8,.3,1.2) forwards}.copy-toast.hide{animation:toastOut .3s ease forwards}
+.toast-check{display:grid;place-items:center;width:25px;height:25px;flex-shrink:0;border-radius:50%;background:#a8f5d01c;color:#a8f5d0;animation:checkPop .4s ease both}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,18px) scale(.96)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
+@keyframes toastOut{from{opacity:1;transform:translate(-50%,0) scale(1)}to{opacity:0;transform:translate(-50%,12px) scale(.97)}}
+.note{display:none}
+footer{flex:0 0 auto;padding:10px 12px;color:#7798ad;text-align:center;font-size:.7rem}
+footer strong{color:#c6ecfb;font-weight:500}
+
+/* Cookie and privacy interfaces */
+.cookie-banner{position:fixed;z-index:100;right:22px;bottom:22px;width:min(540px,calc(100% - 32px));padding:22px;display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;border-color:#aeeeff40;background:linear-gradient(135deg,rgba(16,43,64,.97),rgba(4,18,32,.98));box-shadow:0 20px 70px #0009,0 0 30px #65cfff12;animation:cookieSlideIn .55s cubic-bezier(.2,.8,.3,1.1) both}
+.cookie-banner[hidden],.cookie-overlay[hidden]{display:none!important}
+.cookie-icon{width:40px;height:40px;display:grid;place-items:center;border:1px solid #a8eaff66;border-radius:14px;background:#65cfff12;color:var(--ice);font-size:1.4rem}
+.cookie-content{min-width:0}
+.cookie-eyebrow{margin:0 0 7px;color:#9fe6ff;font-size:.62rem;letter-spacing:.18em}
+.cookie-content h2,.cookie-settings h2{margin:0 0 9px;color:#eafaff;font-size:1.15rem;font-weight:500;letter-spacing:-.025em}
+.cookie-content>p:not(.cookie-eyebrow){margin:0;color:#a9c6d6;font-size:.79rem;line-height:1.65}
+.cookie-text-button{padding:0;border:0;background:none;color:#9fe6ff;font:inherit;font-size:.75rem;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.cookie-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:9px;margin-top:4px}
+.cookie-actions .btn,.cookie-settings-actions .btn{min-height:40px}
+.cookie-reject{background:#d7f5ff08}
+.cookie-overlay{position:fixed;z-index:110;inset:0;display:grid;place-items:center;padding:18px;background:#020914c9;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:cookieFadeIn .2s ease both}
+.cookie-settings{position:relative;width:min(490px,100%);max-height:min(85dvh,700px);overflow-y:auto;padding:26px;border:1px solid #aeeeff45;border-radius:23px;background:linear-gradient(145deg,#102b40f7,#061422fc);box-shadow:0 25px 90px #0009;animation:cookieModalIn .3s ease both}
+.cookie-close{position:absolute;top:15px;right:17px;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:#d7f5ff09;color:#eafaff;font-size:1.4rem;cursor:pointer}
+.cookie-settings-description,.cookie-settings-note{color:#a9c6d6;font-size:.8rem;line-height:1.65}
+.cookie-option{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px 0;border-top:1px solid var(--line);color:#eafaff;cursor:pointer}
+.cookie-option strong{font-size:.85rem;font-weight:500}
+.cookie-option p{margin:5px 0 0;color:#91b5c9;font-size:.73rem;line-height:1.5}
+.cookie-option input{width:19px;height:19px;flex-shrink:0;accent-color:#65cfff;cursor:pointer}
+.cookie-required{flex-shrink:0;color:#9fe6ff;font-size:.68rem}
+.cookie-settings-note{padding:12px;border:1px solid var(--line);border-radius:12px;background:#06152380;font-size:.72rem}
+.cookie-settings-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;margin-top:16px}
+.privacy-shortcut{position:fixed;z-index:90;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid #b8f4ff35;border-radius:30px;background:rgba(7,27,42,.88);color:#c7efff;box-shadow:0 8px 28px #0004;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);font:inherit;font-size:.72rem;cursor:pointer;transition:background .2s,transform .2s}
+.privacy-shortcut:hover{transform:translateY(-2px);background:#173c53ed}
+.privacy-modal{width:min(580px,100%)}
+.privacy-modal h2{padding-right:35px}
+.privacy-section{padding:14px 0;border-top:1px solid var(--line)}
+.privacy-section h3{margin:0 0 8px;color:#bfefff;font-size:.88rem;font-weight:500}
+.privacy-section p{margin:0;color:#a9c6d6;font-size:.79rem;line-height:1.7}
+.privacy-section strong,.privacy-section code{color:#b8f4ff}
+.privacy-section .btn{margin-top:12px}
+.privacy-credit{margin-top:16px;color:#7798ad;font-size:.7rem;text-align:center}
+.cookie-banner button:focus-visible,.cookie-settings button:focus-visible,.privacy-shortcut:focus-visible,.cookie-option input:focus-visible{outline:2px solid #c4f4ff;outline-offset:4px}
+@keyframes cookieSlideIn{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes cookieFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes cookieModalIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:620px){
+ header{padding:10px 12px;gap:8px}.brand{gap:7px;font-size:.55rem;letter-spacing:.06em}.brand-mark{width:30px;height:30px}.pill{padding:7px 8px;font-size:.52rem}
+ main{width:calc(100% - 20px);padding:6px 0;gap:10px}h1{margin:8px 0 6px;font-size:clamp(1.8rem,6vh,3rem)}.subtitle{font-size:.85rem}.release-date{margin-top:9px;font-size:.72rem}.artist{margin:8px 0 4px;font-size:.62rem}
+ .countdown-panel{padding:12px 9px}.section-heading{font-size:.62rem}.countdown{gap:5px;margin:10px 0 7px}.timebox{padding:9px 2px;border-radius:10px}.number{font-size:clamp(1.25rem,4vh,2rem)}.unit{font-size:.47rem;letter-spacing:.04em}.countdown-note{font-size:.66rem}
+ .music-card{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:12px;padding:11px}.cover-container{width:100%}.track-info{text-align:left}.preview-label{font-size:.5rem;letter-spacing:.07em}.track-title{font-size:clamp(.95rem,3.4vh,1.4rem)}.track-subtitle{font-size:.75rem}.track-artist{font-size:.56rem}.track-divider{width:38px;margin:9px 0}.track-description{font-size:.68rem;line-height:1.4}
+ .actions{gap:6px}.btn{min-height:35px;padding:8px 10px;font-size:.67rem}.btn svg{width:16px;height:16px;flex-basis:16px}footer{padding:8px;font-size:.58rem}
+ .cookie-banner{right:10px;bottom:10px;width:calc(100% - 20px);padding:16px;grid-template-columns:32px minmax(0,1fr);gap:10px;border-radius:19px}.cookie-icon{width:31px;height:31px;border-radius:10px;font-size:1.1rem}.cookie-content h2,.cookie-settings h2{font-size:1rem}.cookie-content>p:not(.cookie-eyebrow){font-size:.74rem}.cookie-actions{display:grid;grid-template-columns:1fr 1fr}.cookie-actions .btn{padding:9px 7px;font-size:.69rem}.cookie-settings{padding:22px 18px}.cookie-settings-actions{display:grid;grid-template-columns:1fr}.privacy-shortcut{left:10px;bottom:10px;padding:8px 10px}.cookie-banner:not([hidden])~.privacy-shortcut{display:none}.privacy-section{padding:12px 0}
+}
+@media(max-height:700px){header{padding-top:6px;padding-bottom:6px}main{gap:8px}h1{margin:7px 0 5px}.release-date{margin-top:7px}.artist{margin:7px 0 5px}.countdown-panel{padding-top:10px;padding-bottom:10px}.countdown{margin:8px 0 5px}.timebox{padding:7px 3px}.music-card{grid-template-columns:minmax(0,165px) minmax(0,1fr);padding:10px 13px}.track-divider{margin:8px 0}footer{padding-top:6px;padding-bottom:6px}}
+@media(max-height:560px){header{padding-top:4px;padding-bottom:4px}.brand-mark{width:25px;height:25px}main{gap:5px;padding:3px 0}.eyebrow{font-size:.56rem}h1{font-size:clamp(1.4rem,5vh,2rem);margin:5px 0 3px}.subtitle{font-size:.72rem}.release-date{margin-top:5px;padding:5px 9px}.artist{margin:4px 0}.countdown-panel{padding:7px 9px}.section-heading{font-size:.55rem}.countdown{margin:5px 0}.timebox{padding:4px 2px}.number{font-size:1.15rem}.unit{font-size:.42rem}.music-card{grid-template-columns:minmax(0,105px) minmax(0,1fr);gap:10px;padding:7px}.track-title{font-size:.9rem;margin:4px 0}.track-description{font-size:.6rem;line-height:1.3}.track-divider{margin:5px 0}.btn{min-height:30px;padding:6px 8px;font-size:.6rem}.btn svg{width:14px;height:14px;flex-basis:14px}footer{padding:4px;font-size:.52rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+
+<body>
+<div id="particles" aria-hidden="true"></div>
+
+<header>
+ <div class="brand"><span class="brand-mark">✧</span><span>Gurraoptimus Development</span></div>
+ <div class="pill">NEW RELEASE · 2026</div>
+</header>
+
+<main>
+ <section class="hero">
+  <div class="eyebrow"><span class="pulse-dot"></span>A song for the ones we miss</div>
+  <h1>Somewhere in <span>the Darkness</span></h1>
+  <p class="subtitle">(I Still Miss You...)</p>
+  <div class="release-date">✦ &nbsp; October 31, 2026</div>
+  <p class="artist">A new release by DinoRainbowGirlMusic</p>
+ </section>
+
+ <section class="glass countdown-panel">
+  <h2 class="section-heading">The song drops at 6:00 PM!</h2>
+  <div class="countdown" role="timer" aria-label="Time until release">
+   <div class="timebox"><span class="number" id="days">00</span><span class="unit">Days</span></div>
+   <div class="timebox"><span class="number" id="hours">00</span><span class="unit">Hours</span></div>
+   <div class="timebox"><span class="number" id="minutes">00</span><span class="unit">Minutes</span></div>
+   <div class="timebox"><span class="number" id="seconds">00</span><span class="unit">Seconds</span></div>
+  </div>
+  <p class="countdown-note" id="countdown-note">Every second brings the song closer.</p>
+ </section>
+
+ <section class="glass music-card" aria-label="Upcoming song release">
+  <div class="cover-container">
+   <img class="cover-art" src="cover-art.png" alt="Somewhere in the Darkness album cover">
+  </div>
+  <div class="track-info">
+   <span class="preview-label">✦ &nbsp; UPCOMING RELEASE</span>
+   <h2 class="track-title">Somewhere in the Darkness</h2>
+   <p class="track-subtitle">(I Still Miss You...)</p>
+   <p class="track-artist">DinoRainbowGirlMusic</p>
+   <div class="track-divider"></div>
+   <p class="track-description">A haunting song about loneliness, fading memories, and missing someone who still lives in your heart. Even in the darkness, one question remains: Do you miss me too?</p>
+  </div>
+ </section>
+
+ <div class="actions">
+  <a class="btn primary" href="https://open.spotify.com/artist/68zQCTNNRNVRmYUCCN91r7/" target="_blank" rel="noopener noreferrer" aria-label="Listen on Spotify">
+   <!-- Spotify SVG -->
+   <svg class="spotify-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="11" fill="currentColor"/>
+    <path d="M5.2 8.8c4.8-1.45 10.1-.9 13.7 1.35" fill="none" stroke="#062035" stroke-width="1.9" stroke-linecap="round"/>
+    <path d="M6.2 12.1c3.9-1.15 8.1-.65 11.1 1.2" fill="none" stroke="#062035" stroke-width="1.7" stroke-linecap="round"/>
+    <path d="M7.1 15.1c2.9-.8 5.9-.4 8.4 1.05" fill="none" stroke="#062035" stroke-width="1.55" stroke-linecap="round"/>
+   </svg>
+   <span>Listen on Spotify</span>
+  </a>
+
+  <a class="btn" href="https://music.apple.com/se/album/somewhere-in-the-darkness-i-still-miss-you-single/6827151368" target="_blank" rel="noopener noreferrer" aria-label="Listen on Apple Music">
+   <!-- Apple Music SVG mark -->
+   <svg class="apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <defs>
+     <lineargradient id="appleMusicGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc9e5"/>
+      <stop offset=".5" stop-color="#e6b5ff"/>
+      <stop offset="1" stop-color="#8bdcff"/>
+     </lineargradient>
+    </defs>
+    <path fill="url(#appleMusicGradient)" d="M16.6 2.3c-.8.1-1.8.7-2.4 1.4-.6.7-1 1.7-.9 2.6.9.1 1.9-.5 2.5-1.2.7-.8 1-1.8.8-2.8ZM20.1 16.6c-.5 1.1-.8 1.6-1.4 2.5-.9 1.4-2 3-3.5 3-1.3 0-1.8-.9-3.5-.9-1.8 0-2.2.9-3.5.9-1.5 0-2.6-1.5-3.5-2.9-2.5-3.8-2.7-8.3-1.2-10.8 1-1.7 2.6-2.7 4.3-2.7 1.3 0 2.2.8 3.4.8s1.9-.8 3.4-.8c1.4 0 2.9.8 4 2.1-3.5 1.9-3 6.9 1.5 8.8Z"/>
+   </svg>
+   <span>Apple Music</span>
+  </a>
+
+  <button class="btn" id="share-button" type="button" aria-label="Share release">
+   <!-- Share SVG -->
+   <svg class="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="18" cy="5" r="3"/>
+    <circle cx="6" cy="12" r="3"/>
+    <circle cx="18" cy="19" r="3"/>
+    <path d="m8.7 10.7 6.6-4.4M8.7 13.3l6.6 4.4"/>
+   </svg>
+   <span class="share-label">Share release</span>
+  </button>
+ </div>
+
+ <p class="note">Some memories never fade. Some voices stay with us in the quiet.<br>Meet us somewhere in the darkness — October 31.</p>
+</main>
+
+<footer>© <span id="year"></span> <strong>DinoRainbowGirlMusic</strong> · Created with care by <strong>Gurraoptimus Development</strong></footer>
+
+<div class="copy-toast" id="copy-toast" role="status" aria-live="polite">
+ <span class="toast-check" aria-hidden="true">
+  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+ </span>
+ <span id="toast-message">Link copied to clipboard!</span>
+</div>
+
+<!-- Cookie consent banner -->
+<section class="cookie-banner glass" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description" aria-modal="false" hidden>
+ <div class="cookie-icon" aria-hidden="true">✧</div>
+ <div class="cookie-content">
+  <p class="cookie-eyebrow">YOUR PRIVACY MATTERS</p>
+  <h2 id="cookie-title">A little note about cookies</h2>
+  <p id="cookie-description">We use essential browser storage to remember your preferences. Optional analytics and marketing storage will only be enabled with your permission.</p>
+  <button class="cookie-text-button" id="cookie-settings-link" type="button">Customize preferences</button>
+  <span> · </span>
+  <button class="cookie-text-button" id="open-privacy-policy" type="button">Privacy Policy</button>
+ </div>
+ <div class="cookie-actions">
+  <button class="btn cookie-reject" id="cookie-reject" type="button">Reject optional</button>
+  <button class="btn primary" id="cookie-accept" type="button">Accept all</button>
+ </div>
+</section>
+
+<!-- Cookie preferences -->
+<div class="cookie-overlay" id="cookie-overlay" hidden>
+ <section class="cookie-settings glass" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title">
+  <button class="cookie-close" id="cookie-close" type="button" aria-label="Close cookie settings">×</button>
+  <p class="cookie-eyebrow">PRIVACY CONTROL</p>
+  <h2 id="cookie-settings-title">Cookie preferences</h2>
+  <p class="cookie-settings-description">Choose which optional categories you want to allow. Essential storage is always active.</p>
+  <div class="cookie-option"><div><strong>Essential storage</strong><p>Remembers your cookie choice and essential preferences.</p></div><span class="cookie-required">Always active</span></div>
+  <label class="cookie-option" for="cookie-analytics"><div><strong>Analytics</strong><p>Helps understand how visitors use the website, if an analytics service is added.</p></div><input id="cookie-analytics" type="checkbox"></label>
+  <label class="cookie-option" for="cookie-marketing"><div><strong>Marketing</strong><p>Allows marketing-related storage and personalization, if a service is added.</p></div><input id="cookie-marketing" type="checkbox"></label>
+  <p class="cookie-settings-note">This website currently loads no analytics or marketing scripts. Selecting an option records your preference but does not itself activate a tracking service.</p>
+  <div class="cookie-settings-actions">
+   <button class="btn cookie-reject" id="cookie-save-essential" type="button">Reject optional</button>
+   <button class="btn primary" id="cookie-save" type="button">Save preferences</button>
+  </div>
+ </section>
+</div>
+
+<!-- Privacy Policy — Gurraoptimus Development -->
+<div class="cookie-overlay" id="privacy-overlay" hidden>
+ <section class="cookie-settings glass privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+  <button class="cookie-close" id="privacy-close" type="button" aria-label="Close privacy policy">×</button>
+  <p class="cookie-eyebrow">GURRAOPTIMUS DEVELOPMENT · 2026</p>
+  <h2 id="privacy-title">Privacy Policy</h2>
+  <p class="cookie-settings-description">Your privacy matters. This policy explains how this release website handles browser storage, preferences, and external music links.</p>
+
+  <div class="privacy-section">
+   <h3>1. Website operator</h3>
+   <p>This release website is presented by <strong>Gurraoptimus Development</strong> in connection with the release of <em>Somewhere in the Darkness (I Still Miss You...)</em> by DinoRainbowGirlMusic.</p>
+  </div>
+  <div class="privacy-section">
+   <h3>2. Essential browser storage</h3>
+   <p>The website uses local browser storage to remember your cookie preferences. The preference is stored under <code>gurraoptimus_cookie_consent_v1</code>. This is used to remember your choice.</p>
+  </div>
+  <div class="privacy-section">
+   <h3>3. Analytics and marketing</h3>
+   <p>The current code does not load analytics or marketing services. Selecting either optional category only saves your preference; it does not activate tracking scripts or load third-party services.</p>
+  </div>
+  <div class="privacy-section">
+   <h3>4. External music services</h3>
+   <p>Spotify and Apple Music links lead to external websites. Their own privacy policies and data practices apply when you visit those services. This website does not control their handling of your information.</p>
+  </div>
+  <div class="privacy-section">
+   <h3>5. Sharing and clipboard</h3>
+   <p>The Share Release button copies this website's URL to your clipboard when you activate it. The page does not intentionally send that URL to an analytics or marketing service.</p>
+  </div>
+  <div class="privacy-section">
+   <h3>6. Your choices</h3>
+   <p>You can revisit your cookie preferences at any time using the Privacy button. Clearing this website's browser data also removes the saved preference.</p>
+   <button class="btn" id="privacy-manage-cookies" type="button">Manage cookie preferences</button>
+  </div>
+  <div class="privacy-section">
+   <h3>7. Contact and policy updates</h3>
+   <p>For privacy questions, use an official contact channel published by Gurraoptimus Development. This policy should be updated if the website's data practices or third-party services change.</p>
+  </div>
+  <p class="cookie-settings-note">Last updated: October 27, 2026.<br>Written for Gurraoptimus Development.</p>
+  <p class="privacy-credit">© <span id="privacy-year">2026</span> Gurraoptimus Development. All rights reserved.</p>
+  <div class="cookie-settings-actions"><button class="btn primary" id="privacy-done" type="button">Close policy</button></div>
+ </section>
+</div>
+
+<button class="privacy-shortcut" id="open-cookie-settings" type="button" aria-label="Open cookie preferences" aria-expanded="false" title="Cookie preferences">◉ <span>Privacy</span></button>
+
+<script>
+const $ = id => document.getElementById(id);
+
+// Release countdown: October 31, 2026 at midnight in Sweden.
+const releaseAt = new Date("2026-10-31T18:00:00+01:00").getTime();
+
+function updateCountdown(){
+ const diff=releaseAt-Date.now();
+ if(diff<=0){
+  ["days","hours","minutes","seconds"].forEach(id=>$(id).textContent="00");
+  $("countdown-note").textContent="It's release day! Somewhere in the Darkness is here.";
+  return;
+ }
+ const values={
+  days:Math.floor(diff/86400000),
+  hours:Math.floor((diff%86400000)/3600000),
+  minutes:Math.floor((diff%3600000)/60000),
+  seconds:Math.floor((diff%60000)/1000)
+ };
+ Object.entries(values).forEach(([id,value])=>$(id).textContent=String(value).padStart(2,"0"));
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+const currentYear=new Date().getFullYear();
+$("year").textContent=currentYear;
+$("privacy-year").textContent=currentYear;
+
+// Floating background particles.
+const particleLayer=$("particles");
+for(let i=0;i<30;i++){
+ const particle=document.createElement("span");
+ particle.className="particle";
+ particle.style.left=Math.random()*100+"%";
+ particle.style.top=Math.random()*100+"%";
+ particle.style.animationDuration=11+Math.random()*18+"s";
+ particle.style.animationDelay=-Math.random()*25+"s";
+ particleLayer.appendChild(particle);
+}
+
+// SVG icon states for the Share button.
+const shareButton=$("share-button");
+const shareLabel=shareButton.querySelector(".share-label");
+const shareIcon=shareButton.querySelector(".share-icon");
+const copyToast=$("copy-toast");
+const toastMessage=$("toast-message");
+let toastTimer,resetTimer;
+
+const shareSvg=`
+ <circle cx="18" cy="5" r="3"/>
+ <circle cx="6" cy="12" r="3"/>
+ <circle cx="18" cy="19" r="3"/>
+ <path d="m8.7 10.7 6.6-4.4M8.7 13.3l6.6 4.4"/>
+`;
+
+const copyingSvg=`
+ <rect x="8" y="8" width="12" height="12" rx="2"/>
+ <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>
+`;
+
+const checkSvg=`<path d="m5 12 4 4L19 6"/>`;
+
+function setShareIcon(svg){
+ shareIcon.innerHTML=svg;
+}
+
+function showCopyToast(message){
+ clearTimeout(toastTimer);
+ toastMessage.textContent=message;
+ copyToast.classList.remove("show","hide");
+ void copyToast.offsetWidth;
+ copyToast.classList.add("show");
+ toastTimer=setTimeout(()=>{
+  copyToast.classList.remove("show");
+  copyToast.classList.add("hide");
+ },2600);
+}
+
+function setShareButtonDefault(){
+ shareButton.classList.remove("copying","copied");
+ shareLabel.textContent="Share release";
+ setShareIcon(shareSvg);
+ shareButton.disabled=false;
+}
+
+async function copyReleaseLink(){
+ if(shareButton.classList.contains("copying"))return;
+
+ clearTimeout(resetTimer);
+ shareButton.classList.remove("copied");
+ shareButton.classList.add("copying");
+ shareButton.disabled=true;
+ shareLabel.textContent="Copying link...";
+ setShareIcon(copyingSvg);
+
+ const link=window.location.href;
+ let copied=false;
+
+ try{
+  if(navigator.clipboard&&window.isSecureContext){
+   await navigator.clipboard.writeText(link);
+   copied=true;
+  }else{
+   const input=document.createElement("textarea");
+   input.value=link;
+   input.setAttribute("readonly","");
+   input.style.position="fixed";
+   input.style.opacity="0";
+   input.style.pointerEvents="none";
+   document.body.appendChild(input);
+   input.select();
+   copied=document.execCommand("copy");
+   input.remove();
+  }
+ }catch(error){
+  copied=false;
+ }
+
+ shareButton.classList.remove("copying");
+
+ if(copied){
+  shareButton.classList.add("copied");
+  shareLabel.textContent="Link copied!";
+  setShareIcon(checkSvg);
+  showCopyToast("Website link copied to clipboard!");
+  resetTimer=setTimeout(setShareButtonDefault,2600);
+ }else{
+  shareButton.classList.remove("copied");
+  shareLabel.textContent="Copy link manually";
+  setShareIcon(shareSvg);
+  shareButton.disabled=false;
+  showCopyToast("Clipboard unavailable — copy your link manually.");
+  window.prompt("Copy your release website link:",link);
+ }
+}
+
+shareButton.addEventListener("click",copyReleaseLink);
+
+// Cookie consent and privacy controls.
+(()=>{
+ const banner=$("cookie-banner");
+ const overlay=$("cookie-overlay");
+ const accept=$("cookie-accept");
+ const reject=$("cookie-reject");
+ const settingsLink=$("cookie-settings-link");
+ const openSettings=$("open-cookie-settings");
+ const closeSettings=$("cookie-close");
+ const save=$("cookie-save");
+ const saveEssential=$("cookie-save-essential");
+ const analytics=$("cookie-analytics");
+ const marketing=$("cookie-marketing");
+
+ const privacyOverlay=$("privacy-overlay");
+ const privacyClose=$("privacy-close");
+ const privacyDone=$("privacy-done");
+ const privacyLink=$("open-privacy-policy");
+ const privacyManageCookies=$("privacy-manage-cookies");
+
+ const STORAGE_KEY="gurraoptimus_cookie_consent_v1";
+ const defaults={necessary:true,analytics:false,marketing:false,updatedAt:null};
+ let previousFocus=null;
+ let activeDialog=null;
+
+ function readConsent(){
+  try{
+   const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
+   if(!saved||saved.necessary!==true||
+      typeof saved.analytics!=="boolean"||
+      typeof saved.marketing!=="boolean")return null;
+   return {
+    necessary:true,
+    analytics:saved.analytics,
+    marketing:saved.marketing,
+    updatedAt:saved.updatedAt||null
+   };
+  }catch(error){return null}
+ }
+
+ function applyConsent(consent){
+  window.dispatchEvent(new CustomEvent("cookieconsentchange",{detail:{...consent}}));
+ }
+
+ function sync(consent){
+  analytics.checked=consent.analytics;
+  marketing.checked=consent.marketing;
+ }
+
+ function updateBodyLock(){
+  document.body.style.overflow=
+   (!overlay.hidden||!privacyOverlay.hidden)?"hidden":"";
+ }
+
+ function saveConsent(preferences){
+  const consent={
+   necessary:true,
+   analytics:Boolean(preferences.analytics),
+   marketing:Boolean(preferences.marketing),
+   updatedAt:new Date().toISOString()
+  };
+
+  try{
+   localStorage.setItem(STORAGE_KEY,JSON.stringify(consent));
+  }catch(error){
+   // If storage is unavailable, the choice applies for this page session only.
+  }
+
+  applyConsent(consent);
+  banner.hidden=true;
+  overlay.hidden=true;
+  privacyOverlay.hidden=true;
+  activeDialog=null;
+  updateBodyLock();
+  openSettings.setAttribute("aria-expanded","false");
+  return consent;
+ }
+
+ function openPreferences(){
+  previousFocus=document.activeElement;
+  activeDialog="cookies";
+  sync(readConsent()||defaults);
+  overlay.hidden=false;
+  privacyOverlay.hidden=true;
+  updateBodyLock();
+  openSettings.setAttribute("aria-expanded","true");
+  closeSettings.focus();
+ }
+
+ function closePreferences(){
+  overlay.hidden=true;
+  activeDialog=null;
+  updateBodyLock();
+  openSettings.setAttribute("aria-expanded","false");
+  if(previousFocus&&typeof previousFocus.focus==="function")previousFocus.focus();
+ }
+
+ function openPrivacyPolicy(){
+  previousFocus=document.activeElement;
+  activeDialog="privacy";
+  privacyOverlay.hidden=false;
+  overlay.hidden=true;
+  updateBodyLock();
+  privacyClose.focus();
+ }
+
+ function closePrivacyPolicy(){
+  privacyOverlay.hidden=true;
+  activeDialog=null;
+  updateBodyLock();
+  if(previousFocus&&typeof previousFocus.focus==="function")previousFocus.focus();
+ }
+
+ accept.addEventListener("click",()=>saveConsent({
+  necessary:true,analytics:true,marketing:true
+ }));
+ reject.addEventListener("click",()=>saveConsent(defaults));
+ settingsLink.addEventListener("click",openPreferences);
+ openSettings.addEventListener("click",openPreferences);
+ closeSettings.addEventListener("click",closePreferences);
+ save.addEventListener("click",()=>saveConsent({
+  necessary:true,analytics:analytics.checked,marketing:marketing.checked
+ }));
+ saveEssential.addEventListener("click",()=>saveConsent(defaults));
+
+ privacyLink.addEventListener("click",openPrivacyPolicy);
+ privacyClose.addEventListener("click",closePrivacyPolicy);
+ privacyDone.addEventListener("click",closePrivacyPolicy);
+
+ privacyManageCookies.addEventListener("click",()=>{
+  privacyOverlay.hidden=true;
+  openPreferences();
+ });
+
+ overlay.addEventListener("click",event=>{
+  if(event.target===overlay)closePreferences();
+ });
+ privacyOverlay.addEventListener("click",event=>{
+  if(event.target===privacyOverlay)closePrivacyPolicy();
+ });
+
+ document.addEventListener("keydown",event=>{
+  if(event.key==="Escape"){
+   if(!privacyOverlay.hidden)closePrivacyPolicy();
+   else if(!overlay.hidden)closePreferences();
+  }
+
+  if(event.key==="Tab"&&activeDialog){
+   const focusable=activeDialog==="privacy"
+    ?[privacyClose,privacyManageCookies,privacyDone]
+    :[closeSettings,analytics,marketing,saveEssential,save];
+
+   const first=focusable[0];
+   const last=focusable[focusable.length-1];
+
+   if(event.shiftKey&&document.activeElement===first){
+    event.preventDefault();
+    last.focus();
+   }else if(!event.shiftKey&&document.activeElement===last){
+    event.preventDefault();
+    first.focus();
+   }
+  }
+ });
+
+ const existing=readConsent();
+ if(existing){
+  banner.hidden=true;
+  sync(existing);
+  applyConsent(existing);
+ }else{
+  banner.hidden=false;
+  sync(defaults);
+ }
+
+ openSettings.hidden=false;
+ openSettings.setAttribute("aria-expanded","false");
+})();
+</script>
+</body>
+</html>
