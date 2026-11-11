@@ -153,12 +153,12 @@ footer strong{color:#c6ecfb;font-weight:500}
 
 
  <section class="glass countdown-panel">
-  <h2 class="section-heading">Out Now!</h2>
+  <h2 class="section-heading">at soon!</h2>
   <div class="countdown" role="timer" aria-label="Time until release">
-   <div class="timebox"><span class="number" id="days">00</span><span class="unit">Days</span></div>
-   <div class="timebox"><span class="number" id="hours">00</span><span class="unit">Hours</span></div>
-   <div class="timebox"><span class="number" id="minutes">00</span><span class="unit">Minutes</span></div>
-   <div class="timebox"><span class="number" id="seconds">00</span><span class="unit">Seconds</span></div>
+   <div class="timebox"><span class="number" id="days"></span><span class="unit">Days</span></div>
+   <div class="timebox"><span class="number" id="hours"></span><span class="unit">Hours</span></div>
+   <div class="timebox"><span class="number" id="minutes"></span><span class="unit">Minutes</span></div>
+   <div class="timebox"><span class="number" id="seconds"></span><span class="unit">Seconds</span></div>
   </div>
   <p class="countdown-note" id="countdown-note">Every second brings the song closer.</p>
  </section>
@@ -169,11 +169,11 @@ footer strong{color:#c6ecfb;font-weight:500}
   </div>
   <div class="track-info">
    <span class="preview-label">✦ &nbsp; RELEASE</span>
-   <h2 class="track-title">Somewhere in the Darkness</h2>
-   <p class="track-subtitle">(I Still Miss You...)</p>
+   <h2 class="track-title">I Saw You in a Cursed Spring</h2>
+   <p class="track-subtitle">(Norowareta haru)</p>
    <p class="track-artist">DinoRainbowGirlMusic</p>
    <div class="track-divider"></div>
-   <p class="track-description">A haunting song about loneliness, fading memories, and missing someone who still lives in your heart. Even in the darkness, one question remains: Do you miss me too?</p>
+   <p class="track-description">Norowareta haru</p>
   </div>
  </section>
 
@@ -318,7 +318,7 @@ function updateCountdown(){
  const diff=releaseAt-Date.now();
  if(diff<=0){
   ["days","hours","minutes","seconds"].forEach(id=>$(id).textContent="00");
-  $("countdown-note").textContent="It's release day! I Saw You in a Cursed Spring (Norowareta haru) is here.";
+  $("countdown-note").textContent="It's release day! I Saw You in a Cursed Spring(Norowareta haru) is here.";
   return;
  }
  const values={
