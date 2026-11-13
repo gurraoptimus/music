@@ -46,8 +46,11 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
 @keyframes floatUp{from{transform:translateY(40px);opacity:0}20%{opacity:.8}80%{opacity:.45}to{transform:translateY(-110vh);opacity:0}}
 header,main,footer{position:relative;z-index:1}
 header{flex:0 0 auto;width:100%;max-width:1250px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px}
-.brand{display:flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}
-.brand-mark{display:grid;place-items:center;flex-shrink:0;width:36px;height:36px;border:1px solid #a8eaff77;border-radius:50%;color:var(--ice)}
+.brand{display:flex;align-items:center;gap:10px;letter-spacing:0;text-transform:none}
+.brand-mark{display:grid;place-items:center;flex-shrink:0;width:40px;height:36px;border:1px solid #a8eaff77;border-radius:9px;color:var(--ice);font-family:Consolas,"Courier New",monospace;font-size:.88rem;font-weight:700;letter-spacing:0}
+.brand-wordmark{display:grid;gap:4px}
+.brand-name{color:#effaff;font-size:.86rem;font-weight:650;line-height:1}
+.brand-subtitle{color:#9fe6ff;font-size:.56rem;letter-spacing:.2em;line-height:1;text-transform:uppercase}
 .pill{border:1px solid var(--line);border-radius:30px;padding:9px 12px;color:#c7efff;background:#d7f5ff09;font-size:.67rem;letter-spacing:.1em;white-space:nowrap}
 main{flex:1 0 auto;min-height:0;width:min(920px,calc(100% - 32px));margin:0 auto;padding:10px 0;display:flex;flex-direction:column;justify-content:center;gap:12px;overflow:visible}
 .hero{flex:0 0 auto;text-align:center;animation:fadeIn 1s ease both}
@@ -147,8 +150,11 @@ footer strong{color:#c6ecfb;font-weight:500}
 <div class="page" id="page">
 
 <header>
- <div class="brand"><span class="brand-mark">✧</span><span>Gurraoptimus Development</span></div>
- <div class="pill">NEW RELEASE · 2026</div>
+ <div class="brand" aria-label="Gurraoptimus Development">
+  <span class="brand-mark" aria-hidden="true">{G}</span>
+  <span class="brand-wordmark"><span class="brand-name">Gurraoptimus</span><span class="brand-subtitle">Development</span></span>
+ </div>
+ <div class="pill">RELEASE · 2026</div>
 </header>
 
 <main>
