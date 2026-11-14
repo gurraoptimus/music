@@ -292,7 +292,7 @@ footer strong{color:#c6ecfb;font-weight:500}
 const $ = id => document.getElementById(id);
 
 // Release countdown: Nov 15, 2026 at midnight in Sweden.
-const releaseAt = new Date("2026-11-15T60:00:00+01:00").getTime();
+const releaseAt = new Date("2026-11-15T00:06:00+01:00").getTime();
 let releaseAnnounced=false;
 $("release-dialog-close").addEventListener("click",()=>$("release-dialog").close());
 $("release-dialog").addEventListener("keydown",event=>{
