@@ -30,6 +30,7 @@ DinoRainbowGirlMusic explores different musical styles and creates original musi
 - Late Nights -->
 
 ### Other Releases
+- I Saw You in a Cursed Spring (Norowareta haru)
 - Somewhere in the Darkness (I Still Miss You…)
 - Cherry Blossom
 - Snowdrop
@@ -38,8 +39,7 @@ DinoRainbowGirlMusic explores different musical styles and creates original musi
 - Cactus
 - (EP) Year Zero
 
-<!-- I Saw You in a Cursed Spring (Norowareta haru)
-- I Saw You in a Cursed Spring (Dance Remix)
+<!-- - I Saw You in a Cursed Spring (Dance Remix)
 - GORZ SKARN BURZUM -->
 
 ## 🎧 Listen to My Music
