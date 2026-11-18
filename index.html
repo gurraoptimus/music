@@ -162,7 +162,7 @@ footer strong{color:#c6ecfb;font-weight:500}
   <div class="eyebrow"><span class="pulse-dot"></span><span id="release-status">NEW SINGLE</span></div>
   <h1>I Saw You in <span>a Cursed Spring</span></h1>
   <p class="subtitle">(Norowareta haru)</p>
-  <div class="release-date">✦ &nbsp; Nov 15, 2026</div>
+  <div class="release-date">✦ &nbsp; <time class="release-date-value"></time></div>
   <p class="artist">release by DinoRainbowGirlMusic</p>
  </section> 
 
@@ -170,10 +170,10 @@ footer strong{color:#c6ecfb;font-weight:500}
  <section class="glass countdown-panel">
   <h2 class="section-heading" id="countdown-heading">COMING SOON</h2>
   <div class="countdown" id="countdown" role="timer" aria-label="Time until release">
-   <div class="timebox"><span class="number" id="days">00</span><span class="unit">Days</span></div>
-   <div class="timebox"><span class="number" id="hours">00</span><span class="unit">Hours</span></div>
-   <div class="timebox"><span class="number" id="minutes">00</span><span class="unit">Minutes</span></div>
-   <div class="timebox"><span class="number" id="seconds">00</span><span class="unit">Seconds</span></div>
+   <div class="timebox"><span class="number" id="days">NaN</span><span class="unit">Days</span></div>
+   <div class="timebox"><span class="number" id="hours">NaN</span><span class="unit">Hours</span></div>
+   <div class="timebox"><span class="number" id="minutes">NaN</span><span class="unit">Minutes</span></div>
+   <div class="timebox"><span class="number" id="seconds">NaN</span><span class="unit">Seconds</span></div>
   </div>
   <p class="countdown-note" id="countdown-note" role="status" aria-live="polite">Every second brings the song closer.</p>
  </section>
@@ -188,7 +188,7 @@ footer strong{color:#c6ecfb;font-weight:500}
    <p class="track-subtitle">(Norowareta haru)</p>
    <p class="track-artist">DinoRainbowGirlMusic</p>
    <div class="track-divider"></div>
-   <p class="track-description">A new single by DinoRainbowGirlMusic. Available November 15, 2026.</p>
+  <p class="track-description">A new single by DinoRainbowGirlMusic. Available <time class="release-date-value"></time>.</p>
   </div>
  </section>
 
@@ -258,7 +258,7 @@ footer strong{color:#c6ecfb;font-weight:500}
   </button>
  </div>
 
- <p class="note">I Saw You in a Cursed Spring.<br>(Norowareta haru) — Nov 15.</p>
+ <p class="note">I Saw You in a Cursed Spring.<br>(Norowareta haru) — <time class="release-date-value"></time>.</p>
 </main>
 
 <footer>© <span id="year"></span> <strong>DinoRainbowGirlMusic</strong> · Created with care by <strong>Gurraoptimus Development</strong></footer>
@@ -293,6 +293,13 @@ const $ = id => document.getElementById(id);
 
 // Release countdown: Nov 15, 2026 at midnight in Sweden.
 const releaseAt = new Date("2026-11-15T06:00:00+01:00").getTime();
+const releaseDate=new Intl.DateTimeFormat("en-US",{
+ month:"short",day:"numeric",year:"numeric",timeZone:"Europe/Stockholm"
+});
+document.querySelectorAll(".release-date-value").forEach(element=>{
+ element.dateTime=new Date(releaseAt).toISOString();
+ element.textContent=releaseDate.format(releaseAt);
+});
 let releaseAnnounced=false;
 $("release-dialog-close").addEventListener("click",()=>$("release-dialog").close());
 $("release-dialog").addEventListener("keydown",event=>{
